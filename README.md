@@ -1,36 +1,22 @@
 Minim 1 Adrià Rocamora
 
-Actualment em trobo en els següents punts de les operacions requerides pel mínim.
 
+Component Java
 
-● Añadir un usuario con la siguiente información: identificador, nombre,
-apellidos, correo electrónico y fecha de nacimiento. [FUNCIONANT]
+-Interfície definida: El fitxer JuegoVirtualManager inclou totes les operacions necessàries.
 
-● Listar todos los usuarios ordenados alfabéticamente (apellidos, nombre). [FUNCIONANT]
+-Façana implementada com a Singleton: La classe JuegoVirtualManagerImpl implementa totes les operacions.
 
-● Consultar la información de un usuario usando su identificador. [FUNCIONANT]
+-Estructures de dades: Llistes List per emmagatzemar usuaris i punts d'interès.
 
-● Añadir un punto de interés en el mapa, con la información de su posición
-(coordenadas horizontal y vertical) y su tipo. [FUNCIONANT]
+-Traça de LOG4J: Tots els mètodes registren informació clau, incloent:
+-Paràmetres al començament i resultats al final.
+-Nivells addicionals ERROR, FATAL per a excepcions.
 
-● Registrar que un usuario pasa por un punto de interés, identificándolo
-con el id del usuario y la posición del punto de interés (coordenadas
-horizontal y vertical). Si el usuario o el punto de interés en esas
-coordenadas no existen, se deberá informar del error. [FUNCIONANT]
+Tests
 
-● Consultar los puntos de interés por los que un usuario ha pasado, en el
-orden en que se ha registrado. [Error: Internal Server Error Code 500]
+-S'han desenvolupat proves JUnit per validar les operacions principals al component Java. He inclòs un test per cada operació per a verificar-ne el funcionament.
 
-● Listar los usuarios que han pasado por un punto de interés identificado
-por sus coordenadas. Si el punto de interés no existe en esa posición, se
-deberá informar del error.  [Error: Internal Server Error Code 500]
+Actualment, totes les proves passen correctament.
 
-● Consultar los puntos de interés del mapa que sean de un tipo
-(ElementType) determinado. El resultado mostrará el listado de puntos
-de interés con sus coordenadas (horizontal y vertical) que sean
-del tipo especificado. [FUNCIONANT]
-
-El servidor inicia, accedeixo a la URL del Swagger i puc fer 6 de les 8 operacions demanades,
-les que funcionen responen amb codi correcte i quan no funcionen amb l'error corresponent.
-
-En quant al test, per ara passa 7 dels 8.
+En quant al servei REST, puc fer 6 de les 8 operacions demanades, les que funcionen responen amb codi correcte i quan no ho han de fer amb l'error corresponent. 
